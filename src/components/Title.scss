@@ -1,0 +1,26 @@
+@import "../App.scss";
+.title {
+	text-align: center;
+	&-headline {
+		font-size: 3.2rem;
+		font-weight: 900;
+		font-family: $main-font;
+		letter-spacing: 0.4rem;
+		text-transform: uppercase;
+		color: #fff;
+		&.dark {
+			color: $main-font-color-dark;
+		}
+	}
+	&-subheadline {
+		font-size: 6.2rem;
+		font-weight: 100;
+		color: $secondary-font-color;
+		font-family: $secondary-font;
+		letter-spacing: 0.3rem;
+		line-height: 0.4;
+		&::first-letter {
+			font-size: 7.8rem;
+		}
+	}
+}

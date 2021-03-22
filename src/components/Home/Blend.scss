@@ -1,0 +1,11 @@
+.blend {
+	background: url("./perfect-blend.jpg") center/cover no-repeat;
+	height: 100vh;
+	width: 100vw;
+	margin-top: 3.9rem;
+}
+@media screen and (max-width: 900px) {
+	.blend {
+		margin-top: 2.4rem;
+	}
+}

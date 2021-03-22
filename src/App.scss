@@ -1,0 +1,50 @@
+$main-font: "Source Sans Pro", sans-serif;
+$secondary-font: "Herr Von Muellerhoff", cursive;
+$body-font: "Cabin", sans-serif;
+$main-font-color-dark: #252525;
+$secondary-font-color: #c59d5f;
+$body-font-color: #515151;
+
+html {
+	font-size: 10px;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: $body-font;
+	color: $body-font-color;
+	font-size: 1.6rem;
+	overflow-x: hidden;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	max-width: 122.5rem;
+	padding: 0 10rem;
+	margin: 0 auto;
+	transition: padding 300ms ease-in-out;
+}
+
+.flex {
+	display: flex;
+
+	&-jc-c {
+		justify-content: center;
+	}
+	&-ai-c {
+		align-items: center;
+	}
+	&-jc-sb {
+		justify-content: space-between;
+	}
+}
+@media screen and (max-width: 900px) {
+	.container {
+		padding: 0 2.4rem;
+	}
+}

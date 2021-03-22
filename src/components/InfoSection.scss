@@ -1,0 +1,71 @@
+@import "../App.scss";
+.info-section {
+	&.container {
+		padding-top: 3.9rem;
+	}
+}
+.info {
+	flex: 1;
+	text-align: center;
+	margin-right: 7rem;
+	padding-top: 3rem;
+	i {
+		font-size: 1.4rem;
+		padding: 1.2rem 0;
+	}
+	p {
+		line-height: 2.5rem;
+		font-size: 1.8rem;
+		margin-bottom: 2.4rem;
+	}
+	a {
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		font-weight: 500;
+		color: $secondary-font-color;
+		cursor: pointer;
+		position: relative;
+		transition: color 300ms ease-in-out;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $secondary-font-color;
+			transition: background-color 300ms ease-in-out;
+		}
+		&:hover {
+			color: $main-font-color-dark;
+			&::after {
+				background-color: $main-font-color-dark;
+			}
+		}
+	}
+}
+.images {
+	flex: 1;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	&.image-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+}
+@media screen and (max-width: 900px) {
+	.info-section {
+		&.container {
+			padding-top: 2.4rem;
+			flex-direction: column;
+		}
+	}
+	.info {
+		margin-right: 0;
+		margin-bottom: 2.4rem;
+	}
+}

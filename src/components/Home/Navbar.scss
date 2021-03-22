@@ -1,0 +1,101 @@
+@import "../../App.scss";
+header {
+	position: absolute;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding-top: 3.9rem;
+	transition: padding-top 300ms ease-in-out;
+}
+.navbar {
+	&-menu {
+		list-style-type: none;
+		&-item {
+			display: inline;
+			margin-left: 2.4rem;
+			a {
+				font-size: 1.6rem;
+				color: #fff;
+				letter-spacing: 1px;
+				cursor: pointer;
+				position: relative;
+				transition: color 300ms ease-in-out;
+				&::after {
+					content: "";
+					position: absolute;
+					height: 2px;
+					width: 0;
+					top: 120%;
+					left: 1px;
+					background-color: $secondary-font-color;
+					transition: width 300ms ease-in-out;
+				}
+				&:hover {
+					color: $secondary-font-color;
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	i {
+		font-size: 2.4rem;
+		color: #fff;
+		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.navbar {
+		&-menu {
+			position: absolute;
+			height: 100vh;
+			width: 80vw;
+			background-color: #000;
+			top: 0;
+			left: -100%;
+			display: flex;
+			flex-direction: column;
+			padding-right: 2.4rem;
+			justify-content: space-around;
+			transition: left 300ms ease-in-out;
+
+			&-item {
+				a {
+					display: block;
+					font-size: 1.8rem;
+				}
+			}
+			&::after {
+				content: "";
+				position: absolute;
+
+				height: 100vh;
+				width: 100vw;
+				left: -100%;
+				background-color: rgba($color: #000, $alpha: 0.9);
+				z-index: -1;
+				transition: left 300ms ease-in-out;
+			}
+			&.open {
+				left: 0;
+				&::after {
+					left: 0;
+				}
+			}
+		}
+	}
+	header {
+		padding-top: 1.8rem;
+	}
+}
+
+@media screen and (min-width: 900.1px) {
+	.navbar {
+		i {
+			display: none;
+		}
+	}
+}

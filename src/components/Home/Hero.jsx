@@ -5,7 +5,7 @@ import './Hero.scss'
 
 export default function Hero() {
     return (
-        <section className='hero'>
+        <section className='hero' id='hero'>
             <div className="container flex flex-jc-c flex-ai-c">
                 <Title subheadline='Welcome' headline='The Rosa' />
                 <div className='hero-separetor flex flex-jc-c flex-ai-c'>

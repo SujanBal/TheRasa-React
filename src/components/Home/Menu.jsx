@@ -5,7 +5,7 @@ const images = [{ image_url: 'images/menu-group-1.jpg', image_name: 'menu-group-
 { image_url: 'images/menu-group-3.jpg', image_name: 'menu-group-3' }, { image_url: 'images/menu-group-4.jpg', image_name: 'menu-group-4' }]
 export default function Menu() {
     return (
-        <section className='menu'>
+        <section className='menu' id='menu'>
           <InfoSection subheadline='Discover' headline='Our Menu' text={text} btn_name='View Our Full Menu' images={images} />
         </section>
             

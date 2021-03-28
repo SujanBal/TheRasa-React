@@ -14,8 +14,7 @@ export default function InfoSection(props) {
             <div className={props.images.length>=2?'images image-grid':'images'}>
                 {props.images && props.images.map((image, index) => {
                     const { image_url, image_name } = image;
-                    console.log(props.images.length);
-                    return <img src={image_url} alt={image_name}/>
+                    return <img key={index} src={image_url} alt={image_name}/>
                 })}
             </div>
             

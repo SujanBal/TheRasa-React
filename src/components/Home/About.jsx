@@ -7,7 +7,7 @@ const text='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
 const images=[{image_url:'images/our-story-1.jpg', image_name:'our-story'}]
 export default function About() {
     return (
-        <section className='about'>
+        <section className='about' id='about'>
             <InfoSection subheadline='Discover' headline='Our Story' text={text} btn_name='About Us' images={images}/>
             
         </section>

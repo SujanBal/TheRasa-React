@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import Menu from './Menu';
 import Navbar from "./Navbar";
 import Recipes from './Recipes';
+import Footer from './Footer';
 
 export default function index() {
     return (
@@ -17,6 +18,7 @@ export default function index() {
             <Menu />
             <Blend />
             <Culinary />
+            <Footer />
         </>
     )
 }

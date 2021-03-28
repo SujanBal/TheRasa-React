@@ -1,0 +1,132 @@
+@import "../../App.scss";
+
+.footer {
+	background-color: #000;
+	.container {
+		margin-top: 3.9rem;
+		padding: 6rem;
+		text-align: center;
+		color: #fff;
+		position: relative;
+	}
+	.scrolltop {
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		height: 50px;
+		width: 50px;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		background-color: #000;
+		i {
+			cursor: pointer;
+			transition: color 100ms ease-in-out;
+			&:hover {
+				color: $secondary-font-color;
+			}
+		}
+	}
+	h1 {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	i {
+		font-size: 1.4rem;
+	}
+	&-text {
+		padding: 0 10rem;
+		margin-bottom: 5rem;
+		i {
+			padding: 2rem 0;
+			color: $secondary-font-color;
+		}
+
+		p {
+			line-height: 2.5rem;
+			font-size: 1.6rem;
+			letter-spacing: 0.5px;
+			// margin-bottom: 2.4rem;
+		}
+	}
+	&-contacts {
+		h1 {
+			margin-bottom: 3rem;
+		}
+		&-socialicons {
+			flex: 1;
+			a {
+				i {
+					font-size: 1.8rem;
+					color: #fff;
+					transition: color 300ms ease-in-out;
+				}
+				&:not(:last-child) {
+					margin-right: 3rem;
+				}
+				&:hover {
+					i {
+						color: rgba(255, 255, 255, 0.5);
+					}
+				}
+			}
+		}
+		&-newsletter {
+			flex: 1;
+			.form {
+				width: 50%;
+				position: relative;
+				margin: auto;
+				input {
+					padding: 0.8rem 1.5rem;
+					padding-right: 4rem;
+					font-size: 1.6rem;
+					color: $body-font-color;
+					width: 100%;
+				}
+				i {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					right: 1rem;
+					font-size: 1.8rem;
+					color: #000;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.footer {
+		.container {
+			padding: 3.9rem;
+		}
+		&-text {
+			padding: 0;
+			margin-bottom: 3.9rem;
+		}
+		&-contacts {
+			flex-direction: column;
+
+			&-socialicons {
+				margin-bottom: 3rem;
+			}
+			.form {
+				width: 100%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.footer {
+		.container {
+			padding: 3.9rem 2.4rem;
+		}
+	}
+	.footer-contacts-socialicons a:not(:last-child) {
+		margin-right: 2rem;
+	}
+}
